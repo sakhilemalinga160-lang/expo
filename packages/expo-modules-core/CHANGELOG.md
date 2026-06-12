@@ -32,6 +32,7 @@
 - `NativeArrayBuffer` arguments no longer copy the buffer when it's already native-backed. ([#46448](https://github.com/expo/expo/pull/46448) by [@barthap](https://github.com/barthap))
 - [iOS] `SharedObject::NativeState` now derives from `expo::NativeState` so the Swift wrapper can be recovered from the JS side via `getNativeState`, laying the groundwork for native-state-based shared object lookup. ([#46330](https://github.com/expo/expo/pull/46330) by [@tsapeta](https://github.com/tsapeta))
 - [Android] Ignore already-settled promises. ([#46770](https://github.com/expo/expo/pull/46770) by [@jakex7](https://github.com/jakex7))
+- [iOS] Experimental: decode Fabric view props straight from their JavaScript values on the JavaScript thread (via a dedicated `ExpoViewJSIComponentDescriptor`), instead of lowering to `folly::dynamic` / `NSDictionary` and decoding on the main thread. ([#46872](https://github.com/expo/expo/pull/46872) by [@tsapeta](https://github.com/tsapeta))
 
 ## 56.0.13 — 2026-05-26
 
